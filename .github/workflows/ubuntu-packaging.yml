@@ -84,7 +84,7 @@ jobs:
 
       - name: Upload Release deb file
         if: github.event_name == 'release' && github.event.action == 'created'
-        id: upload-release-asset
+        id: upload-release-asset-deb
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -102,7 +102,7 @@ jobs:
 
       - name: Upload Release rpm file
         if: github.event_name == 'release' && github.event.action == 'created'
-        id: upload-release-asset
+        id: upload-release-asset-rpm
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -120,7 +120,7 @@ jobs:
 
       - name: Upload Release tar file
         if: github.event_name == 'release' && github.event.action == 'created'
-        id: upload-release-asset
+        id: upload-release-asset-tar
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
